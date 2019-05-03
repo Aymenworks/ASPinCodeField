@@ -18,6 +18,8 @@ Swift 5.0
 
 ## 👨🏻‍💻 Usage
 
+### In code
+
 ```swift
 let pinCodeView = ASPinCodeField()
 pinCodeView.delegate = self
@@ -37,6 +39,10 @@ public protocol ASPinCodeFieldDataSource: class {
     func canPasteFromPasteBoard(_ pinCodeField: ASPinCodeField, pasteboard: String) -> Bool
 }
 ```
+
+###  Advices
+
+If you handle copy paste, don't forget to handle the iOS feature **Handoff** by observing the `UIPasteboardChangedNotification` notification.
 
 ## Installation
 
