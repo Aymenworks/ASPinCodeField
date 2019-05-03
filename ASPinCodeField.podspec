@@ -1,7 +1,6 @@
 Pod::Spec.new do |spec|
-
   spec.name         = "ASPinCodeField"
-  spec.version      = "1.0.0"
+  spec.version      = "1.0.1"
   spec.summary      = "Another PinCode View"
 
   spec.description  = <<-DESC
@@ -14,7 +13,6 @@ Pod::Spec.new do |spec|
   spec.social_media_url   = "https://twitter.com/aymenworks"
   spec.platform     = :ios, "9.0"
   spec.source       = { :git => "https://github.com/Aymenworks/ASPinCodeField.git", :tag => "#{spec.version}" }
-
   spec.source_files  = ['ASPinCodeField/**/*.{swift,h}']
   spec.public_header_files = 'ASPinCodeField/**/*.h'
   spec.requires_arc = true
