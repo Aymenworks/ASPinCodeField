@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "ASPinCodeField"
-  spec.version      = "0.1.0"
+  spec.version      = "1.0.0"
   spec.summary      = "Another PinCode View"
 
   spec.description  = <<-DESC
