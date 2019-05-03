@@ -26,6 +26,15 @@ pinCodeView.borderColor = UIColor.lightGray
 pinCodeView.textColor = UIColor.black
 pinCodeView.cornerRadius = 4
 pinCodeView.textFont = .boldSystemFont(ofSize: 20)
+
+public protocol ASPinCodeFieldDelegate: class {
+    func pinCodeField(_ pinCodeField: ASPinCodeField, didChangeText text: String)
+}
+
+public protocol ASPinCodeFieldDataSource: class {
+    func numberOfDigits(in pinCodeField: ASPinCodeField) -> Int
+    func canPasteFromPasteBoard(_ pinCodeField: ASPinCodeField, pasteboard: String) -> Bool
+}
 ```
 
 ## Installation
