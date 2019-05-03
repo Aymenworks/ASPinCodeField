@@ -25,6 +25,7 @@ pinCodeView.dataSource = self
 pinCodeView.borderColor = UIColor.lightGray
 pinCodeView.textColor = UIColor.black
 pinCodeView.cornerRadius = 4
+pinCodeView.itemsSpacing = 8
 pinCodeView.textFont = .boldSystemFont(ofSize: 20)
 
 public protocol ASPinCodeFieldDelegate: class {
