@@ -40,10 +40,6 @@ public protocol ASPinCodeFieldDataSource: class {
 }
 ```
 
-###  Advices 💡
-
-If you handle copy paste, don't forget to handle the iOS feature **Handoff** by observing the `UIPasteboardChangedNotification` notification.
-
 ## Installation
 
 ### CocoaPods
