@@ -4,6 +4,7 @@
 
 ## Overview
 
+![PinCode gif](./ASPinCodeField.gif)
 ![Whimsical ASPinCodeField](./ASPinCodeField.png)
 
 ## 🔶 Requirements
@@ -44,7 +45,7 @@ public protocol ASPinCodeFieldDataSource: class {
 
 ### CocoaPods
 
-TODO
+```pod 'ASPinCodeField'```
 
 ### Carthage
 
