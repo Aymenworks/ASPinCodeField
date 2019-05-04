@@ -25,7 +25,8 @@ pinCodeView.itemsSpacing = 8
 pinCodeView.textFont = .boldSystemFont(ofSize: 20)
 ```
 
-```
+Delegate and DataSource
+```swift
 public protocol ASPinCodeFieldDelegate: class {
     func pinCodeField(_ pinCodeField: ASPinCodeField, didChangeText text: String)
 }
