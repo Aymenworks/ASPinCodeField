@@ -34,6 +34,7 @@ public protocol ASPinCodeFieldDataSource: class {
     func numberOfDigits(in pinCodeField: ASPinCodeField) -> Int
     func canPasteFromPasteBoard(_ pinCodeField: ASPinCodeField, pasteboard: String) -> Bool
 }
+```
 
 ## Installation
 
