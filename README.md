@@ -4,7 +4,14 @@
 
 ## Overview
 
+
+### Appareance
+
 ![PinCode gif](./ASPinCodeField.gif)
+
+###  Behind the scenes
+
+As simple as:
 ![Whimsical ASPinCodeField](./ASPinCodeField.png)
 
 ## 🔶 Requirements
@@ -45,7 +52,8 @@ public protocol ASPinCodeFieldDataSource: class {
 
 ### Carthage
 
-TODO
+```github "Aymenworks/ASPinCodeField"```
+
 
 ## License
 
