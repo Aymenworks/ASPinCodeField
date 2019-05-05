@@ -291,15 +291,14 @@ fileprivate class DigitView: UIView {
         }
         
         binding: do {
-            // TODO: Continue animation
-            // Restart the animation deleted when the application leave the foreground
-//            NotificationCenter.default.rx.notification(UIApplication.willEnterForegroundNotification)
-//                .asObservable()
-//                .subscribe(onNext: { [weak self] _ in
-//                    if let highlightAnimation = self?.highlightAnimation {
-//                        self?.label.layer.add(highlightAnimation, forKey: "highlightAnimation")
-//                    }
-//                }).disposed(by: disposeBag)
+            // Restart the highlight animation which is automatically deleted when the application leave the foreground
+            NotificationCenter.default.addObserver(self, selector: #selector(resumeHighlightAnimation), name: UIApplication.willEnterForegroundNotification, object: nil)
+        }
+    }
+    
+    @objc func resumeHighlightAnimation() {
+        if let highlightAnimation = self.highlightAnimation {
+            self.label.layer.add(highlightAnimation, forKey: "highlightAnimation")
         }
     }
     
