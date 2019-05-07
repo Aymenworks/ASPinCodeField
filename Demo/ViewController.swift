@@ -11,6 +11,8 @@ import ASPinCodeField
 
 class ViewController: UIViewController, ASPinCodeFieldDelegate, ASPinCodeFieldDataSource {
   
+    // MARK: Properties
+    
     let numberOfDigits = 6
     
     @IBOutlet weak var storyboardPinField: ASPinCodeField! {
@@ -22,6 +24,32 @@ class ViewController: UIViewController, ASPinCodeFieldDelegate, ASPinCodeFieldDa
             storyboardPinField.cornerRadius = 6
             storyboardPinField.textFont = .boldSystemFont(ofSize: 20)
         }
+    }
+    
+    let pinField = ASPinCodeField()
+
+    // MARK: Lifecycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        view.addSubview(pinField)
+
+        pinField.delegate = self
+        pinField.dataSource = self
+        
+        pinField.borderColor = UIColor.lightGray
+        pinField.textColor = UIColor.black
+        pinField.cornerRadius = 6
+        pinField.textFont = .boldSystemFont(ofSize: 20)
+        
+        pinField.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            pinField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 60),
+            pinField.topAnchor.constraint(equalTo: view.topAnchor, constant: 60),
+            pinField.heightAnchor.constraint(equalToConstant: 60),
+            pinField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -60),
+        ])
     }
 
     // MARK: ASPinCodeFieldDelegate

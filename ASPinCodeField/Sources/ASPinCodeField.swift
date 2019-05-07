@@ -24,11 +24,7 @@ public final class ASPinCodeField: UIControl, UIKeyInput {
     
     /// The receiver delegate
     public weak var delegate: ASPinCodeFieldDelegate?
-    public weak var dataSource: ASPinCodeFieldDataSource? {
-        didSet {
-            setup()
-        }
-    }
+    public weak var dataSource: ASPinCodeFieldDataSource?
 
     /// Use that method to set code directly to the component.
     /// You have to check by yourself that the `code` value is appropriate e.g  fits the number of digits, integers values..
@@ -82,7 +78,9 @@ public final class ASPinCodeField: UIControl, UIKeyInput {
     
     public var cornerRadius: CGFloat = 4 {
         didSet {
-            digitsView.forEach { $0.layer.cornerRadius = cornerRadius }
+            digitsView.forEach {
+                $0.layer.cornerRadius = cornerRadius
+            }
         }
     }
     
@@ -107,11 +105,26 @@ public final class ASPinCodeField: UIControl, UIKeyInput {
         }
     }
     
+    var didLayoutSubview = false
+    
     // MARK: Lifecycle
     
     convenience init() {
         self.init(frame: .zero)
     }
+    
+    public override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        guard didLayoutSubview == false else { return }
+        
+        defer {
+            didLayoutSubview = false
+        }
+        
+        setup()
+    }
+    
 
     private func setup() {
         guard let dataSource = self.dataSource else {
@@ -131,6 +144,10 @@ public final class ASPinCodeField: UIControl, UIKeyInput {
         
         for _ in 0 ..< dataSource.numberOfDigits(in: self) {
             let digitView = DigitView()
+            digitView.label.textColor = textColor
+            digitView.label.font = textFont
+            digitView.layer.borderColor = borderColor.cgColor
+            digitView.layer.cornerRadius = cornerRadius
             digitsView.append(digitView)
             self.stackView.addArrangedSubview(digitView)
         }
@@ -144,12 +161,11 @@ public final class ASPinCodeField: UIControl, UIKeyInput {
                 stackView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
             ])
         }
-        
         binding: do {
             addTarget(self, action: #selector(self.becomeFirstResponder), for: .touchDown)
         }
     }
-
+    
     // MARK: UIControl
     
     public override var canBecomeFirstResponder: Bool {
