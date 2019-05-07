@@ -4,21 +4,22 @@
 
 ## Overview
 
+
+### Appareance
+
+![PinCode gif](./ASPinCodeField.gif)
+
+###  Behind the scenes
+
+As simple as:
 ![Whimsical ASPinCodeField](./ASPinCodeField.png)
 
 ## 🔶 Requirements
 
-iOS 9.0+
-Swift 5.0
-
-## 📱 Features
-
-- [x] Feature 1
-- [ ] Feature 2
+- iOS 9.0+
+- Swift 5.0
 
 ## 👨🏻‍💻 Usage
-
-### In code
 
 ```swift
 let pinCodeView = ASPinCodeField()
@@ -29,7 +30,10 @@ pinCodeView.textColor = UIColor.black
 pinCodeView.cornerRadius = 4
 pinCodeView.itemsSpacing = 8
 pinCodeView.textFont = .boldSystemFont(ofSize: 20)
+```
 
+Delegate and DataSource
+```swift
 public protocol ASPinCodeFieldDelegate: class {
     func pinCodeField(_ pinCodeField: ASPinCodeField, didChangeText text: String)
 }
@@ -44,11 +48,12 @@ public protocol ASPinCodeFieldDataSource: class {
 
 ### CocoaPods
 
-TODO
+```pod 'ASPinCodeField'```
 
 ### Carthage
 
-TODO
+```github "Aymenworks/ASPinCodeField"```
+
 
 ## License
 
