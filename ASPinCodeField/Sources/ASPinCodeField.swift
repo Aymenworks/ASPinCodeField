@@ -124,7 +124,6 @@ public final class ASPinCodeField: UIControl, UIKeyInput {
         
         setup()
     }
-    
 
     private func setup() {
         guard let dataSource = self.dataSource else {

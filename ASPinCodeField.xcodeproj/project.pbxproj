@@ -14,6 +14,8 @@
 		A5052F16227B1F7C005F780E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5052F15227B1F7C005F780E /* Assets.xcassets */; };
 		A5052F19227B1F7C005F780E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5052F17227B1F7C005F780E /* LaunchScreen.storyboard */; };
 		A5052F20227B1F98005F780E /* ASPinCodeField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5052F1F227B1F98005F780E /* ASPinCodeField.swift */; };
+		A5183FD22282FB9100CD6BC4 /* ASPinCodeField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5052EFD227B1F6E005F780E /* ASPinCodeField.framework */; };
+		A5183FD32282FB9100CD6BC4 /* ASPinCodeField.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A5052EFD227B1F6E005F780E /* ASPinCodeField.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +27,20 @@
 			remoteInfo = ASPinCodeField;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A5183FD42282FB9100CD6BC4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A5183FD32282FB9100CD6BC4 /* ASPinCodeField.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A5052EFD227B1F6E005F780E /* ASPinCodeField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ASPinCodeField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5183FD22282FB9100CD6BC4 /* ASPinCodeField.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +163,7 @@
 				A5052F08227B1F7B005F780E /* Sources */,
 				A5052F09227B1F7B005F780E /* Frameworks */,
 				A5052F0A227B1F7B005F780E /* Resources */,
+				A5183FD42282FB9100CD6BC4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -443,6 +461,7 @@
 		A5052F1C227B1F7C005F780E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D7C48J3S5N;
@@ -462,6 +481,7 @@
 		A5052F1D227B1F7C005F780E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D7C48J3S5N;
