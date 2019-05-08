@@ -1,4 +1,4 @@
-# 🔢 ASPinCodeField
+# ASPinCodeField
  
 ASPinCodeField is a UI Component that allows you to integrate a pin / digit code UI within your app.
 
